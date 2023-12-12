@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTest2.Views.AuthPage"
+             xmlns:vm="clr-namespace:MauiTest2.ViewModels"
+             xmlns:models="clr-namespace:MauiTest2.Models"
+             x:DataType="vm:AuthViewModel"
+             Title="Auth">
+    <VerticalStackLayout
+        Margin="50">
+        <Entry Text="{Binding Login}" Placeholder="Login"/>
+        <Entry Text="{Binding Password}" Placeholder="Password"/>
+        <Button Text="Auth" Command="{Binding AuthCommand}"/>
+        <Label Text="{Binding Error}"/>
+    </VerticalStackLayout>
+</ContentPage>
